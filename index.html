@@ -43,7 +43,7 @@ function registerDevice() {
     }
 
     var payload = phone + "_" + device;
-    var telegramUrl = "https://t.me" + botUsername + "?start=" + encodeURIComponent(payload);
+    var telegramUrl = "https://t.me/" + botUsername + "?start=" + encodeURIComponent(payload);
     window.location.href = telegramUrl;
 }
 </script>
